@@ -62,9 +62,6 @@ class App extends Component {
           />
           <br></br>
           <Switch>
-            <Route path="/" exact>
-              <Dashboard />
-            </Route>
             <Route path="/login">
               <Login onLoggin={this.handleLogin} error={this.state.error} />
             </Route>
@@ -74,6 +71,9 @@ class App extends Component {
               ) : (
                 <>401-Un Authorized</>
               )}
+            </Route>
+            <Route path="/">
+              <Dashboard />
             </Route>
           </Switch>
         </Router>
