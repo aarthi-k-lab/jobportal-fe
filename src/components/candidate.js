@@ -8,7 +8,7 @@ class Candidate extends Component {
   componentDidMount = () => {
     let imagesrc =
       this.props.candidate.pic_name !== undefined
-        ? "http://knackseek.herokuapp.com/api/candidates/image/" +
+        ? "https://knackseek.herokuapp.com/api/candidates/image/" +
           this.props.candidate.pic_name
         : "";
     let date = moment(this.props.candidate.dob).format("MMM Do YYYY");
@@ -42,11 +42,12 @@ class Candidate extends Component {
       };
 
       let updateMockApiUrl =
-        " http://knackseek.herokuapp.com/api/candidates/" + id;
+        " https://knackseek.herokuapp.com/api/candidates/" + id;
 
       await axios.put(updateMockApiUrl, candidate);
 
-      let candidateMockApiUrl = "http://knackseek.herokuapp.com/api/candidates";
+      let candidateMockApiUrl =
+        "https://knackseek.herokuapp.com/api/candidates";
       let candidateRes = await axios.get(candidateMockApiUrl);
       let candidates = await candidateRes.data.candidate;
       this.setState({ editCandidateFlag: false });
@@ -59,10 +60,11 @@ class Candidate extends Component {
   handleDelete = async (candidate) => {
     try {
       let deleteMockApiUrl =
-        " http://knackseek.herokuapp.com/api/candidates/" + candidate._id;
+        " https://knackseek.herokuapp.com/api/candidates/" + candidate._id;
       await axios.delete(deleteMockApiUrl);
 
-      let candidateMockApiUrl = "http://knackseek.herokuapp.com/api/candidates";
+      let candidateMockApiUrl =
+        "https://knackseek.herokuapp.com/api/candidates";
       let candidateRes = await axios.get(candidateMockApiUrl);
       let candidates = await candidateRes.data.candidate;
       this.setState({ editCandidateFlag: false });

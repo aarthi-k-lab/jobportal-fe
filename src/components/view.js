@@ -10,7 +10,8 @@ class View extends Component {
 
   componentDidMount = async () => {
     try {
-      let candidateMockApiUrl = "http://knackseek.herokuapp.com/api/candidates";
+      let candidateMockApiUrl =
+        "https://knackseek.herokuapp.com/api/candidates";
       let candidateRes = await axios.get(candidateMockApiUrl);
       let candidates = await candidateRes.data.candidate;
       this.setState({ candidates, mapCandidates: candidates });
@@ -58,7 +59,7 @@ class View extends Component {
       formData.append("jobtype", jobtype);
       formData.append("prefferedLocation", prefferedLocation);
 
-      let addMockApiUrl = " http://knackseek.herokuapp.com/api/candidates/";
+      let addMockApiUrl = " https://knackseek.herokuapp.com/api/candidates/";
 
       const config = {
         headers: {
@@ -73,7 +74,7 @@ class View extends Component {
           alertify.success("Candidate added successfully");
 
           let candidateMockApiUrl =
-            "http://knackseek.herokuapp.com/api/candidates";
+            "https://knackseek.herokuapp.com/api/candidates";
           let candidateRes = await axios.get(candidateMockApiUrl);
           let candidates = await candidateRes.data.candidate;
           component.setState({

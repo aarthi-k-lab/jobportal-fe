@@ -15,7 +15,7 @@ class App extends Component {
     try {
       const user = { email: email, password: password };
 
-      const mockapiurl = "http://knackseek.herokuapp.com/login";
+      const mockapiurl = "https://knackseek.herokuapp.com/login";
       const tokenResponse = await fetch(mockapiurl, {
         method: "POST",
         body: JSON.stringify(user),
