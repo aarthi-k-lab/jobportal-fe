@@ -3,18 +3,7 @@ import EditForm from "./editForm.js";
 import moment from "moment";
 import axios from "axios";
 class Candidate extends Component {
-  state = { imagesrc: "", date: "", editCandidateFlag: false };
-
-  componentDidMount = () => {
-    let imagesrc =
-      this.props.candidate.pic_name !== undefined
-        ? "https://knackseek.herokuapp.com/api/candidates/image/" +
-          this.props.candidate.pic_name
-        : "";
-    let date = moment(this.props.candidate.dob).format("MMM Do YYYY");
-
-    this.setState({ imagesrc, date });
-  };
+  state = { editCandidateFlag: false };
 
   handleCancel = () => {
     this.setState({ editCandidateFlag: false });
@@ -75,6 +64,10 @@ class Candidate extends Component {
   };
   render() {
     const { candidate } = this.props;
+    const imagesrc =
+      "https://knackseek.herokuapp.com/api/candidates/image/" +
+      candidate.pic_name;
+    const date = moment(candidate.dob).format("MMM Do YYYY");
     return (
       <>
         {this.state.editCandidateFlag === false ? (
@@ -83,7 +76,7 @@ class Candidate extends Component {
             style={{ textAlign: "center" }}
           >
             <img
-              src={this.state.imagesrc}
+              src={imagesrc}
               className="card-img-top"
               alt="candidate_pic"
               height="400px"
@@ -101,7 +94,7 @@ class Candidate extends Component {
                 </div>
                 <div className="col-12">
                   <b>Date Of Birth: </b>
-                  {this.state.date}
+                  {date}
                 </div>
                 <div className="col-12">
                   <b>Job type: </b>
