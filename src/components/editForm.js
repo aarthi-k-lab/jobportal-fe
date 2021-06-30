@@ -52,13 +52,13 @@ class EditForm extends Component {
   render() {
     const { candidate, onCancel } = this.props;
     return (
-      <div className="card col-4">
+      <div className="card col-12 col-sm-6 col-lg-4  mt-3">
         <form className="row" onSubmit={this.onTrigger}>
           {/* Full Name */}
 
           <input
             type="text"
-            className="form-control m-3 col-12"
+            className="form-control mb-3 col-12"
             placeholder={candidate.fullname}
             aria-label="Username"
             aria-describedby="basic-addon1"

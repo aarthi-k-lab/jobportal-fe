@@ -79,7 +79,7 @@ class Candidate extends Component {
       <>
         {this.state.editCandidateFlag === false ? (
           <div
-            className="card col-4 cardCandidate"
+            className="card col-12 col-sm-6 col-lg-4 cardCandidate mt-3"
             style={{ textAlign: "center" }}
           >
             <img

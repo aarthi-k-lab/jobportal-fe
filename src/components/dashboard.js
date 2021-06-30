@@ -63,7 +63,7 @@ class Dashboard extends Component {
                           data-src="https://bs-uploads.toptal.io/blackfish-uploads/components/talent_benefits_section/benefit/content/image_file/image/263661/work_from_anywhere-d06af28e0ac3b9e0331402b4996edff2.svg"
                           src="https://bs-uploads.toptal.io/blackfish-uploads/components/talent_benefits_section/benefit/content/image_file/image/263661/work_from_anywhere-d06af28e0ac3b9e0331402b4996edff2.svg"
                           alt=""
-                          class=" lazyloaded"
+                          className=" lazyloaded"
                         />
                       </div>
                       <h3

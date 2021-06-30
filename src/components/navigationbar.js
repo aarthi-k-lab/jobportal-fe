@@ -7,27 +7,27 @@ class NavigationBar extends Component {
     const { loginFlag } = this.props;
     return (
       <div className="row navbar">
-        <div className="col-3">
+        <div className="col-3 col-sm-3">
           <img src={Logo} alt="knackseek" height="80px" />
         </div>
-        <div className="col-3">
+        <div className="col-2 col-sm-3">
           <Link to="/">Home</Link>
         </div>
         {loginFlag === "true" ? (
-          <div className="col-3">
+          <div className="col-4 col-sm-3">
             <Link to="/profile">Candidates</Link>
           </div>
         ) : (
           <></>
         )}
         {loginFlag === "true" ? (
-          <div className="col-3">
+          <div className="col-3 col-sm-3">
             <Link to="/" onClick={() => this.props.onLogOut()}>
               LogOut
             </Link>
           </div>
         ) : (
-          <div className="col-3">
+          <div className="col-4 col-sm-3">
             <Link to="/login">Login</Link>
           </div>
         )}

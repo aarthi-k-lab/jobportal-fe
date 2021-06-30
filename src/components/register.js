@@ -51,7 +51,7 @@ class Register extends Component {
           }}
         >
           <div className="row">
-            <div className="col-6">
+            <div className="col-12 col-md-6 mb-3">
               <input
                 type="text"
                 className="form-control"
@@ -64,7 +64,7 @@ class Register extends Component {
                 }
               />
             </div>
-            <div className="col-6">
+            <div className="col-12 col-md-6">
               <div className="input-group mb-3">
                 <input
                   type="file"
@@ -83,7 +83,7 @@ class Register extends Component {
             </div>
           </div>
           <div className="row">
-            <div className="col-6">
+            <div className="col-12 mb-3 col-md-6">
               <input
                 type="text"
                 className="form-control"
@@ -98,7 +98,7 @@ class Register extends Component {
                 }
               />
             </div>
-            <div className="col-6">
+            <div className="col-12 mb-3 col-md-6">
               <input
                 type="email"
                 className="form-control"
@@ -114,7 +114,7 @@ class Register extends Component {
           </div>
           <br></br>
           <div className="row">
-            <div className="col-6">
+            <div className="col-12 mb-3 col-md-6">
               <div className="input-group mb-3">
                 <select
                   className="form-select"
@@ -136,9 +136,9 @@ class Register extends Component {
                 </label>
               </div>
             </div>
-            <div className="col-6" style={{ display: "flex" }}>
+            <div className="col-12 mb-3 col-md-6" style={{ display: "flex" }}>
               <label
-                className="col-1"
+                className="col-2 col-lg-1"
                 style={{
                   alignSelf: "center",
                   border: "1px solid #ced4da",
@@ -150,7 +150,7 @@ class Register extends Component {
                 DOB
               </label>
               <input
-                className="col-11"
+                className="col-10 col-lg-11"
                 type="date"
                 placeholder="Date Of Birth"
                 style={{
@@ -165,7 +165,7 @@ class Register extends Component {
           </div>
           <div className="row">
             <div
-              className="col-6"
+              className="col-12 mb-3 col-md-6"
               style={{
                 border: "1px solid #ced4da",
                 padding: "5px",
@@ -213,7 +213,7 @@ class Register extends Component {
               </div>
             </div>
             <div
-              className="col-6"
+              className="col-12 mb-3 col-md-6"
               style={{
                 display: "flex",
                 alignItems: "center",
